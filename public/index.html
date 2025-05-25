@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tej Application Project</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TEJ Application Project</h1>
+    </header>
+    <main>
+      <hr
+        style="
+          height: 1px;
+          background-color: #625d58;
+          border: none;
+          width: 100%;
+        "
+      />
+      <div class="Samosa-container">
+        <h3><p>Samosa</p></h3>
+        <label for="Samosa-Price">Price:</label>
+        <input type="number" id="Samosa-Price" value="Samosa-Price" name="Samosa-Price" /> 
+      </div>
+      <div class="samosa-quantity-container">
+        <label for="Quantity">Quantity:</label>
+        <button class="quantity-btn-plus">+</button>
+        <span class="samosa-quantity-label">0</span>
+        <button class="quantity-btn-minus">−</button>
+      </div>
+      <div class="samosa-total">
+        <label>Total: <span id="samosa-total">0</span></label>
+      </div>
+      <hr
+        style="
+          height: 1.2px;
+          background-color: #625d58;
+          border: none;
+          width: 100%;
+        "
+      />
+      <div class="Tea-container">
+        <h3><p>Tea</p></h3>
+        <label for="Tea-Price">Price:</label>
+        <input type="number" id="Tea-Price" name="Tea-Price" />
+      </div>
+      <div class="tea-quantity-container">
+        <label for="Quantity">Quantity:</label>
+       <button class="tea-quantity-btn-plus">+</button>
+        <span class="tea-quantity-label">0</span>
+         <button class="tea-quantity-btn-minus">−</button>
+      </div>
+      <div class="tea-total">
+        <label>Total: <span id="tea-total">0</span></label>
+      </div>
+      <hr
+        style="
+          height: 1.2px;
+          background-color: #625d58;
+          border: none;
+          width: 100%;
+        "
+      />
+      <div class="TotalAll-container">
+        <label>Total price: <span id="Total-price">0</span></label><br/>
+        <label>Vat (13%): <span id="Vat"> 0 </span></label><br/>
+        <label>Tip (10%): <span id="Tip"> 0 </span></label>
+      </div>
+      <hr
+        style="
+          height: 1.2px;
+          background-color: #625d58;
+          border: none;
+          width: 100%;
+        "
+      />
+      <div class="GrandTotal-container">
+        <label>Grand total: <span id="Grand-Total">0</span></label><br/>
+        <button name="myButton" id="myButton">Calculate grand total</button>
+      </div>
+      <div class="SubmitBill-container">
+       <a href="/submit"><button name="SubmitBill" id="SubmitBill">Submit Bill</button></a>
+      </div>
+    </main>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
