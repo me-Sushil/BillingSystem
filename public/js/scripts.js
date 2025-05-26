@@ -2,8 +2,8 @@ window.addEventListener("DOMContentLoaded", function () {
   alert("Hello TEJ!");
 
   // For Quantity increase and decrease buttons
-  const plusButtons = document.querySelectorAll(".quantity-btn-plus");
-  const minusButtons = document.querySelectorAll(".quantity-btn-minus");
+ // const plusButtons = document.querySelectorAll(".quantity-btn-plus");
+  //const minusButtons = document.querySelectorAll(".quantity-btn-minus");
   
   //For samosa
   const samosaPriceInput = document.getElementById("Samosa-Price");
