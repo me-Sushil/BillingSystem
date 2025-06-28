@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
-  alert("Hello TEJ!");
+  alert("Hello User!");
 
   // For Quantity increase and decrease buttons
   const plusButtons = document.querySelectorAll(".quantity-btn-plus");
