@@ -1,6 +1,10 @@
 window.addEventListener("DOMContentLoaded", function () {
-  alert("Hello User!");
+  alert("Hello TEJ!");
 
+  // For Quantity increase and decrease buttons
+  const plusButtons = document.querySelectorAll(".quantity-btn-plus");
+  const minusButtons = document.querySelectorAll(".quantity-btn-minus");
+  
   //For samosa
   const samosaPriceInput = document.getElementById("Samosa-Price");
   const samosaQuantityContainer = document.querySelector(".samosa-quantity-container");
@@ -139,5 +143,3 @@ document.getElementById('SubmitBill').addEventListener('click', async () => {
   }
 });
 });
-
-
