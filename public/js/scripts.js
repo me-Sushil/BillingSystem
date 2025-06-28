@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
     // let quantity = parseInt(samosaQuantityLabel.textContent) || 0;
     // quantity++;
     // samosaQuantityLabel.textContent = quantity;
-    takeValue(2);
+    takeValue(1);
     updateSamosaTotal();
   });
 
