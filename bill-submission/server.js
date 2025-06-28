@@ -4,17 +4,10 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
+app.use(express.json());//Parses incoming JSON and adds it to req.body
 
 // Serve static files from ../public
 app.use(express.static(path.join(__dirname, "..", "public")));
-
-let lastSubmit = null;
-
-app.get("/submit", (req, res) => {
-  res.status(200).json(lastSubmit);
-    
-});
 
 let allBills = [];
 app.post("/api/bills", (req, res) => {
@@ -38,6 +31,12 @@ app.post("/api/bills", (req, res) => {
 
   console.log(`Grand total received: ${grandTotal} at ${timestamp}`);
   res.status(200).json({ message: "Bill submitted successfully", bill });
+});
+
+let lastSubmit = null;
+app.get("/submit", (req, res) => {
+  res.status(200).json(lastSubmit);
+    
 });
 
 app.get("/api/bills", (req, res) => {

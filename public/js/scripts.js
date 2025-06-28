@@ -1,10 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
-  alert("Hello TEJ!");
+  alert("Hello User!");
 
-  // For Quantity increase and decrease buttons
-  const plusButtons = document.querySelectorAll(".quantity-btn-plus");
-  const minusButtons = document.querySelectorAll(".quantity-btn-minus");
-  
   //For samosa
   const samosaPriceInput = document.getElementById("Samosa-Price");
   const samosaQuantityContainer = document.querySelector(".samosa-quantity-container");
@@ -26,19 +22,27 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   samosaPlusBtn.addEventListener("click", () => {
-    let quantity = parseInt(samosaQuantityLabel.textContent) || 0;
-    quantity++;
-    samosaQuantityLabel.textContent = quantity;
+    // let quantity = parseInt(samosaQuantityLabel.textContent) || 0;
+    // quantity++;
+    // samosaQuantityLabel.textContent = quantity;
+    takeValue(2);
     updateSamosaTotal();
   });
 
-  samosaMinusBtn.addEventListener("click", () => {
+   function takeValue(value){
     let quantity = parseInt(samosaQuantityLabel.textContent) || 0;
-    if (quantity > 0) {
-      quantity--;
-      samosaQuantityLabel.textContent = quantity;
+   quantity= quantity + value;
+    samosaQuantityLabel.textContent = quantity;
+
+   }
+  samosaMinusBtn.addEventListener("click", () => {
+    // let quantity = parseInt(samosaQuantityLabel.textContent) || 0;
+    // if (quantity > 0) {
+    //   quantity--;
+    //   samosaQuantityLabel.textContent = quantity;
+    takeValue(-1);
       updateSamosaTotal();
-    }
+    
   });
 
   samosaPriceInput.addEventListener("input", () => {
@@ -129,9 +133,11 @@ document.getElementById('SubmitBill').addEventListener('click', async () => {
   });
 
   if (response.ok) {
-    alert('The Bill submitted successfully!');
+    alert('The Bill submitted successfully!');  
   } else {
     alert('Failed to submit bill.');
   }
 });
 });
+
+
